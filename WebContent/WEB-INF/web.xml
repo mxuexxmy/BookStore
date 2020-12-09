@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>BookStore</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>userLogin</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.UserSerlvet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>userLogin</servlet-name>
+  	<url-pattern>/user/page/userLogin.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>check</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.UserCheckNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>check</servlet-name>
+  	<url-pattern>/user/page/checkName.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  	<servlet-name>checkphone</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.UserCheckPhoneServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>checkphone</servlet-name>
+  	<url-pattern>/user/page/checkPhone.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  	<servlet-name>saveuser</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.UserSaveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saveuser</servlet-name>
+  	<url-pattern>/user/page/regist.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>exit</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.UserExitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>exit</servlet-name>
+  	<url-pattern>/user/page/exit.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>search</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>search</servlet-name>
+  	<url-pattern>/user/page/search.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>detail</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.BookDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>detail</servlet-name>
+  	<url-pattern>/user/page/detail.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>saveCart</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.SaveCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saveCart</servlet-name>
+  	<url-pattern>/user/page/saveCart.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>saveCollect</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.SaveOrDeleteCollectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saveCollect</servlet-name>
+  	<url-pattern>/user/page/collect.do</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>collections</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.CollectionsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>collections</servlet-name>
+  	<url-pattern>/user/page/collections.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>cartdetailquery</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.CartDetailQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cartdetailquery</servlet-name>
+  	<url-pattern>/user/page/queryall.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>deleteCart</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.CartDetailDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deleteCart</servlet-name>
+  	<url-pattern>/user/page/deleteCart.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>buyNow</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.BuyNowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>buyNow</servlet-name>
+  	<url-pattern>/user/page/buyNow.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>updateOrder</servlet-name>
+  	<servlet-class>com.tarena.servlet.user.UpdateOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateOrder</servlet-name>
+  	<url-pattern>/user/page/updateOrder.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <filter>
+  	<filter-name>pageFilter</filter-name>
+  	<filter-class>com.tarena.filter.PageFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>pageFilter</filter-name>
+  	<url-pattern>/user/page/index.jsp</url-pattern>
+  </filter-mapping>
+</web-app>

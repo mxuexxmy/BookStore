@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkName() {
+		//1.获取AJAX对象
+		var xmlhttp = null;
+		if(window.XMLHttpRequest){
+			xmlhttp = new XMLHttpRequest();
+		}else{
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		var name = document.getElementById("name").value;
+		//2.处理回调函数
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.status==200&&xmlhttp.readyState==4){
+				alert(xmlhttp.responseText);
+			}
+		}
+		//3.打开
+		//xmlhttp.open("get","checkName.do?name="+name);
+		xmlhttp.open("post","checkName.do");
+		xmlhttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
+		//4.发送
+		xmlhttp.send("name="+name);
+	}
+
+</script>
+</head>
+<body>
+	<p>
+	用户名：<input type="text" id="name" onblur="checkName();">
+	<span id="mess"></span>
+	</p>
+</body>
+</html>
